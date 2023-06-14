@@ -193,11 +193,11 @@ class Game extends JPanel {
                 setStatus(GameStatus.RUNNING);
             }
 
-            if (status == GameStatus.GAME_OVER && key == KeyEvent.VK_ENTER) {
+            if (status == GameStatus.GAME_OVER && key == KeyEvent.VK_ENTER || key == KeyEvent.VK_SPACE) {
                 reset();
             }
 
-            if (key == KeyEvent.VK_P) {
+            if (key == KeyEvent.VK_P || key == KeyEvent.VK_ESCAPE) {
                 togglePause();
             }
         }
